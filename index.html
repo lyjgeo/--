@@ -181,7 +181,7 @@ img{display:block;width:100%;height:100%;object-fit:cover}
 .tech-body h3{font-size:17px;margin:6px 0}
 .tech-body p{color:var(--muted);font-size:11px;line-height:1.6}
 .swarm-art{
-  position:absolute;inset:0;background:
+  position:relative;height:138px;inset:auto;background:
     radial-gradient(circle at 25% 35%,rgba(22,217,255,.2),transparent 3%),
     radial-gradient(circle at 72% 25%,rgba(32,245,160,.2),transparent 3%),
     linear-gradient(135deg,#06131d,#0a2533);
@@ -359,7 +359,7 @@ footer{padding:34px 0;border-top:1px solid rgba(93,196,231,.12);color:#607b88;fo
 <main id="home">
 <section class="hero">
   <div class="hero-media">
-    <img src="https://images.pexels.com/photos/32018248/pexels-photo-32018248.jpeg?auto=compress&cs=tinysrgb&w=2000" alt="Modern drone in flight">
+    <img src="./assets/hero.jpg" alt="Modern drone in flight">
   </div>
   <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
 
@@ -419,12 +419,12 @@ footer{padding:34px 0;border-top:1px solid rgba(93,196,231,.12);color:#607b88;fo
 
     <div class="tech-grid" style="margin-top:30px">
       <article class="tech-card">
-        <div class="tech-image"><img src="https://images.pexels.com/photos/4173486/pexels-photo-4173486.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Drone flight"></div>
+        <div class="tech-image"><img src="./assets/ai-vision.jpg" alt="Drone flight"></div>
         <div class="tech-body"><div class="tech-code">01 / PERCEPTION</div><h3>AI Vision</h3><p>Object detection, tracking, scene understanding and visual decision support for autonomous flight.</p></div>
       </article>
 
       <article class="tech-card">
-        <div class="tech-image"><img src="https://images.pexels.com/photos/12794566/pexels-photo-12794566.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Drone camera"></div>
+        <div class="tech-image"><img src="./assets/slam-vio.jpg" alt="Drone camera"></div>
         <div class="tech-body"><div class="tech-code">02 / LOCALIZATION</div><h3>SLAM / VIO</h3><p>Estimate motion and build a map when GPS is weak, unavailable or not reliable enough.</p></div>
       </article>
 
@@ -498,7 +498,7 @@ footer{padding:34px 0;border-top:1px solid rgba(93,196,231,.12);color:#607b88;fo
       </article>
 
       <article class="tech-card">
-        <div class="tech-image"><img src="https://images.pexels.com/photos/15499219/pexels-photo-15499219.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Drone close-up"></div>
+        <div class="tech-image"><img src="./assets/edge-ai.jpg" alt="Drone close-up"></div>
         <div class="tech-body"><div class="tech-code">10 / DETECTION</div><h3>YOLO</h3><p>Real-time object detection architectures are widely used as a building block for machine perception.</p></div>
       </article>
     </div>
@@ -513,23 +513,23 @@ footer{padding:34px 0;border-top:1px solid rgba(93,196,231,.12);color:#607b88;fo
 
     <div class="app-grid" style="margin-top:30px">
       <article class="app-card">
-        <img src="https://images.pexels.com/photos/37288733/pexels-photo-37288733.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Agricultural drone">
+        <img src="./assets/agriculture.jpg" alt="Agricultural drone">
         <div class="app-copy"><h3>Precision Agriculture</h3><p>Crop monitoring, aerial application, plant-health inspection and field analytics.</p></div>
       </article>
       <article class="app-card">
-        <img src="https://images.pexels.com/photos/7457211/pexels-photo-7457211.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Aerial mapping landscape">
+        <img src="./assets/mapping.jpg" alt="Aerial mapping landscape">
         <div class="app-copy"><h3>Mapping & Survey</h3><p>Photogrammetry, terrain models, inspection and high-resolution spatial data.</p></div>
       </article>
       <article class="app-card">
-        <img src="https://images.pexels.com/photos/18623743/pexels-photo-18623743.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Aerial city view">
+        <img src="./assets/urban-airspace.jpg" alt="Aerial city view">
         <div class="app-copy"><h3>Urban Airspace</h3><p>Infrastructure inspection, situational awareness and emerging low-altitude mobility.</p></div>
       </article>
       <article class="app-card">
-        <img src="https://images.pexels.com/photos/34182337/pexels-photo-34182337.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Commercial drone">
+        <img src="./assets/delivery.jpg" alt="Commercial drone">
         <div class="app-copy"><h3>Delivery & Logistics</h3><p>Autonomous last-mile delivery and new models for time-sensitive transport.</p></div>
       </article>
       <article class="app-card">
-        <img src="https://images.pexels.com/photos/1596276/pexels-photo-1596276.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Aerial coastal monitoring">
+        <img src="./assets/inspection.jpg" alt="Aerial coastal monitoring">
         <div class="app-copy"><h3>Inspection & Monitoring</h3><p>Coastlines, power assets, construction sites and hard-to-reach environments.</p></div>
       </article>
     </div>
@@ -545,19 +545,19 @@ footer{padding:34px 0;border-top:1px solid rgba(93,196,231,.12);color:#607b88;fo
     <div class="split" style="margin-top:30px">
       <div class="db-grid">
         <article class="db-card">
-          <div class="db-img"><img src="https://images.pexels.com/photos/539124/pexels-photo-539124.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Consumer drone"></div>
+          <div class="db-img"><img src="./assets/dji.jpg" alt="Consumer drone"></div>
           <div class="db-copy"><h3>DJI</h3><p>Consumer and enterprise UAV ecosystem with strong imaging and automation capabilities.</p><div class="specs"><span class="spec">Imaging</span><span class="spec">Enterprise</span></div></div>
         </article>
         <article class="db-card">
-          <div class="db-img"><img src="https://images.pexels.com/photos/13310697/pexels-photo-13310697.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Autonomous drone"></div>
+          <div class="db-img"><img src="./assets/skydio.jpg" alt="Autonomous drone"></div>
           <div class="db-copy"><h3>Skydio</h3><p>Autonomous flight built around onboard perception, obstacle avoidance and navigation.</p><div class="specs"><span class="spec">AI</span><span class="spec">Autonomy</span></div></div>
         </article>
         <article class="db-card">
-          <div class="db-img"><img src="https://images.pexels.com/photos/1757697/pexels-photo-1757697.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Drone in flight"></div>
+          <div class="db-img"><img src="./assets/anduril.jpg" alt="Drone in flight"></div>
           <div class="db-copy"><h3>Anduril</h3><p>Autonomous systems architecture centered on sensor fusion, mission autonomy and networked operations.</p><div class="specs"><span class="spec">Autonomy</span><span class="spec">Networked</span></div></div>
         </article>
         <article class="db-card">
-          <div class="db-img"><img src="https://images.pexels.com/photos/12794566/pexels-photo-12794566.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Drone delivery concept"></div>
+          <div class="db-img"><img src="./assets/slam-vio.jpg" alt="Drone delivery concept"></div>
           <div class="db-copy"><h3>Wing</h3><p>Autonomous delivery aircraft designed around low-altitude logistics networks.</p><div class="specs"><span class="spec">Delivery</span><span class="spec">Autonomy</span></div></div>
         </article>
       </div>
