@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Victor Blog</title>
+<style>
+:root{--bg:#eef2f6;--card:#fff;--text:#172033;--muted:#667085;--primary:#4f7df3}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text)}
+.container{max-width:1100px;margin:auto;padding:0 20px}
+.hero{height:320px;margin:24px auto 0;border-radius:28px;background:linear-gradient(135deg,#7d8da6,#b7c4d5);position:relative;overflow:hidden}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:24px}
+.logo,.nav a{background:rgba(255,255,255,.18);backdrop-filter:blur(10px);padding:10px 16px;border-radius:999px;color:#fff;text-decoration:none}
+.menu{display:flex;gap:10px}
+.profile{max-width:1100px;margin:-70px auto 0;padding:0 20px}
+.card{background:#fff;border-radius:28px;padding:36px;display:flex;gap:28px;align-items:center;box-shadow:0 20px 40px rgba(0,0,0,.08)}
+.avatar{width:130px;height:130px;border-radius:50%;background:#d9e2ef;display:flex;align-items:center;justify-content:center;font-size:44px}
+h1{font-size:52px;margin:0 0 10px}p{color:var(--muted);line-height:1.8}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+.btn{padding:11px 18px;border:1px solid #e5e7eb;border-radius:12px;text-decoration:none;color:var(--text);transition:.25s}
+.btn:hover,.article:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.08)}
+section{max-width:1100px;margin:50px auto;padding:0 20px}
+.header{display:flex;justify-content:space-between;align-items:end}
+.article{background:#fff;border-radius:24px;padding:28px;margin-top:22px;transition:.25s}
+.meta{font-size:14px;color:#8a93a3}
+footer{text-align:center;padding:50px;color:#8a93a3}
+@media(max-width:768px){
+.card{flex-direction:column;text-align:center}.menu{display:none}h1{font-size:36px}.hero{height:240px}.avatar{width:100px;height:100px;font-size:34px}
+.btns{justify-content:center}
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="hero">
+<div class="nav">
+<div class="logo">▲ Victor's Blog</div>
+<div class="menu">
+<a href="#">首页</a><a href="#">文章</a><a href="#">项目</a><a href="#">联系</a>
+</div></div></div></div>
+
+<div class="profile">
+<div class="card">
+<div class="avatar">V</div>
+<div>
+<h1>你好，我是 Victor。</h1>
+<p>欢迎来到我的个人博客。我在这里分享 AI、编程、量化交易、效率工具以及生活思考，希望通过文章记录成长，也帮助更多人。</p>
+<div class="btns">
+<a class="btn" href="#">📧 邮箱</a>
+<a class="btn" href="#">🐙 GitHub</a>
+<a class="btn" href="#">🌐 网站</a>
+<a class="btn" href="#">💼 LinkedIn</a>
+</div>
+</div>
+</div>
+</div>
+
+<section>
+<div class="header"><h2>最新文章</h2><span class="meta">标题 + 日期 + 分类 + 摘要</span></div>
+
+<div class="article">
+<h2>高性价比 VPS 推荐与搭建思路</h2>
+<div class="meta">2026-05-01 · 推荐</div>
+<p>从价格、线路、原生 IP 与用途等多个角度，整理一套适合长期使用的 VPS 选择方案。</p>
+</div>
+
+<div class="article">
+<h2>使用 AI 提高开发效率</h2>
+<div class="meta">2026-04-18 · AI</div>
+<p>分享如何利用 AI 工具完成代码生成、文档整理、自动化测试和日常开发工作流。</p>
+</div>
+
+<div class="article">
+<h2>我的个人博客搭建记录</h2>
+<div class="meta">2026-03-22 · Web</div>
+<p>从域名、服务器到部署上线，记录整个博客建设过程以及踩坑经验。</p>
+</div>
+</section>
+
+<footer>© 2026 Victor Lee · Designed with HTML & CSS</footer>
+</body></html>

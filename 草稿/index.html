@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人博客</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #2d3748;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .profile-section {
+            text-align: center;
+            padding: 60px 0 40px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #fff;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            margin-bottom: 18px;
+        }
+
+        .name {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .bio {
+            color: #64748b;
+            max-width: 520px;
+            margin: 0 auto 24px;
+        }
+
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+
+        .btn {
+            padding: 9px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.2s ease;
+        }
+        .btn-primary {
+            background: #2563eb;
+            color: white;
+        }
+        .btn-primary:hover {
+            background: #1d4ed8;
+        }
+        .btn-outline {
+            border: 1px solid #cbd5e1;
+            color: #334155;
+        }
+        .btn-outline:hover {
+            background-color: #f1f5f9;
+        }
+
+        .contact {
+            font-size: 14px;
+            color: #64748b;
+        }
+        .contact a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        .article-section {
+            padding: 40px 0;
+        }
+        .section-title {
+            font-size: 20px;
+            margin-bottom: 26px;
+            font-weight: 600;
+        }
+
+        .article-item {
+            padding: 18px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .article-item:last-child {
+            border-bottom: none;
+        }
+        .article-title {
+            font-size: 18px;
+            margin-bottom: 6px;
+        }
+        .article-title a {
+            color: #2d3748;
+            text-decoration: none;
+        }
+        .article-title a:hover {
+            color: #2563eb;
+        }
+        .article-meta {
+            font-size: 13px;
+            color: #94a3b8;
+        }
+        .article-desc {
+            margin-top: 8px;
+            font-size: 14px;
+            color: #64748b;
+        }
+
+        @media (max-width: 576px) {
+            .profile-section {
+                padding: 40px 0 30px;
+            }
+            .avatar {
+                width: 100px;
+                height: 100px;
+            }
+            .name {
+                font-size: 22px;
+            }
+            .btn-group {
+                gap: 8px;
+            }
+            .btn {
+                padding: 8px 16px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-section">
+            <img class="avatar" src="avatar.jpg" alt="头像">
+            <h1 class="name">你的名字</h1>
+            <p class="bio">
+                这里填写个人简介，记录生活、分享技术与思考。热爱探索，持续学习，用心写下每一段文字。
+            </p>
+            <div class="btn-group">
+                <a href="#" class="btn btn-primary">全部文章</a>
+                <a href="#" class="btn btn-outline">关于我</a>
+                <a href="#" class="btn btn-outline">留言板</a>
+                <a href="#" class="btn btn-outline">归档</a>
+            </div>
+            <div class="contact">
+                📮 Email：xxx@example.com | GitHub：<a href="#">github.com/xxx</a>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <h2 class="section-title">最新文章</h2>
+
+            <div class="article-item">
+                <h3 class="article-title">
+                    <a href="#">第一篇博客文章标题</a>
+                </h3>
+                <div class="article-meta">2026-07-25</div>
+                <p class="article-desc">文章简短摘要，简单介绍本篇内容核心，吸引点击阅读全文。</p>
+            </div>
+
+            <div class="article-item">
+                <h3 class="article-title">
+                    <a href="#">日常思考随笔记录</a>
+                </h3>
+                <div class="article-meta">2026-07-20</div>
+                <p class="article-desc">记录日常感悟，沉淀想法，整理成长路上的心得与体会。</p>
+            </div>
+
+            <div class="article-item">
+                <h3 class="article-title">
+                    <a href="#">学习笔记分享范例</a>
+                </h3>
+                <div class="article-meta">2026-07-15</div>
+                <p class="article-desc">整理学习过程中遇到的知识点、踩坑经验，方便后续回顾查阅。</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

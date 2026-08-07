@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 Drone Buying Guide | Drone X</title>
+    <style>
+        /* Reset & Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #faf9f8;
+            color: #1d1d1f;
+            line-height: 1.7;
+            padding: 20px;
+        }
+        .container {
+            max-width: 820px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px 50px;
+            border-radius: 24px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+        }
+
+        /* Navigation back */
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: #0071e3;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Header */
+        .post-header {
+            border-bottom: 1px solid #e5e5e5;
+            padding-bottom: 25px;
+            margin-bottom: 30px;
+        }
+        .post-category {
+            display: inline-block;
+            background: #e8f2ff;
+            color: #0066cc;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 20px;
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+        .post-title {
+            font-size: 2.6rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            margin-bottom: 12px;
+        }
+        .post-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            font-size: 14px;
+            color: #6e6e73;
+        }
+        .post-meta span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .post-meta .author-name {
+            color: #1d1d1f;
+            font-weight: 600;
+        }
+
+        /* Table of Contents */
+        .toc {
+            background: #f5f5f7;
+            padding: 20px 28px;
+            border-radius: 16px;
+            margin-bottom: 35px;
+        }
+        .toc h4 {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #6e6e73;
+            margin-bottom: 8px;
+        }
+        .toc ul {
+            list-style: none;
+            padding: 0;
+            columns: 2;
+            column-gap: 30px;
+        }
+        .toc ul li {
+            margin-bottom: 4px;
+            font-size: 15px;
+        }
+        .toc ul li a {
+            text-decoration: none;
+            color: #1d1d1f;
+            border-bottom: 1px dotted transparent;
+            transition: border 0.2s;
+        }
+        .toc ul li a:hover {
+            border-bottom-color: #0071e3;
+        }
+
+        /* Content */
+        .post-content h2 {
+            font-size: 1.8rem;
+            font-weight: 650;
+            margin: 40px 0 12px 0;
+            letter-spacing: -0.02em;
+        }
+        .post-content h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 28px 0 8px 0;
+        }
+        .post-content p {
+            margin-bottom: 18px;
+            font-size: 1.05rem;
+            color: #2c2c2e;
+        }
+        .post-content ul, .post-content ol {
+            margin: 0 0 20px 25px;
+        }
+        .post-content li {
+            margin-bottom: 6px;
+        }
+
+        /* Table */
+        .post-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.95rem;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .post-content th {
+            background: #f5f5f7;
+            text-align: left;
+            padding: 12px 15px;
+            font-weight: 600;
+        }
+        .post-content td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ececec;
+        }
+        .post-content tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Blockquote */
+        .post-content blockquote {
+            border-left: 4px solid #0071e3;
+            padding: 12px 24px;
+            margin: 25px 0;
+            background: #f8f9fc;
+            border-radius: 0 12px 12px 0;
+            font-style: italic;
+        }
+
+        /* Author Box */
+        .author-box {
+            margin-top: 50px;
+            padding: 28px 30px;
+            background: #f8f9fc;
+            border-radius: 20px;
+            display: flex;
+            gap: 25px;
+            align-items: center;
+            border: 1px solid #eaeaea;
+        }
+        .author-avatar {
+            width: 70px;
+            height: 70px;
+            background: #d2d2d6;
+            border-radius: 50%;
+            flex-shrink: 0;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="40" r="30" fill="%23a1a1a6"/><circle cx="50" cy="90" r="40" fill="%23a1a1a6"/></svg>');
+            background-size: cover;
+            background-position: center;
+        }
+        .author-box h4 {
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+        .author-box p {
+            font-size: 0.95rem;
+            color: #4a4a4e;
+            margin: 0;
+        }
+
+        /* Related Posts */
+        .related {
+            margin-top: 45px;
+            padding-top: 30px;
+            border-top: 1px solid #e5e5e5;
+        }
+        .related h4 {
+            font-size: 1.1rem;
+            margin-bottom: 16px;
+        }
+        .related-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        .related-item {
+            background: #f5f5f7;
+            padding: 16px 20px;
+            border-radius: 14px;
+            text-decoration: none;
+            color: #1d1d1f;
+            transition: background 0.2s;
+        }
+        .related-item:hover {
+            background: #ececee;
+        }
+        .related-item .r-title {
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        .related-item .r-date {
+            font-size: 0.8rem;
+            color: #6e6e73;
+        }
+
+        /* Footer */
+        .post-footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e5e5e5;
+            font-size: 0.9rem;
+            color: #6e6e73;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .container {
+                padding: 25px 18px;
+            }
+            .post-title {
+                font-size: 1.8rem;
+            }
+            .toc ul {
+                columns: 1;
+            }
+            .post-content table {
+                font-size: 0.8rem;
+            }
+            .post-content table th, .post-content table td {
+                padding: 8px 6px;
+            }
+            .author-box {
+                flex-direction: column;
+                text-align: center;
+            }
+            .related-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Back to Home -->
+        <a href="#" class="back-link">← Back to Drone X</a>
+
+        <!-- Article Header -->
+        <header class="post-header">
+            <span class="post-category">Buying Guide</span>
+            <h1 class="post-title">2026 Drone Buying Guide: Best Sub-250g Models Compared</h1>
+            <div class="post-meta">
+                <span>✍️ <span class="author-name">Tony</span></span>
+                <span>📅 July 25, 2026</span>
+                <span>⏱️ 6 min read</span>
+                <span>🏷️ #Drones #Tech #BuyingGuide</span>
+            </div>
+        </header>
+
+        <!-- Table of Contents -->
+        <div class="toc">
+            <h4>📑 In this guide</h4>
+            <ul>
+                <li><a href="#why-250g">Why 250g Matters</a></li>
+                <li><a href="#contenders">The 2026 Contenders</a></li>
+                <li><a href="#dji-mini5">DJI Mini 5 Pro</a></li>
+                <li><a href="#hoverair">HoverAir X1 Pro Max</a></li>
+                <li><a href="#potensic">Potensic Atom 2</a></li>
+                <li><a href="#ruko">Ruko F11GIM2</a></li>
+                <li><a href="#final-advice">Final Buying Advice</a></li>
+            </ul>
+        </div>
+
+        <!-- Post Content -->
+        <div class="post-content">
+            <p>If you’ve been eyeing a drone in 2026, you’ve probably noticed one number popping up everywhere: <strong>250 grams</strong>. Why does it matter? In most countries (FAA in the US, EASA in Europe, CAAC in China), sub-250g drones sit in the lightest regulatory category — meaning no remote ID requirement in many regions, less paperwork, and more freedom to fly over people (with caution) and in urban areas.</p>
+            
+            <p>But weight isn’t everything. This year, manufacturers packed flagship features into these pocket-sized flyers. Here’s my no-BS breakdown of the top 4 sub-250g contenders, tested over 50+ flight hours.</p>
+
+            <h2 id="why-250g">Why 250g Matters More Than Ever</h2>
+            <p>In 2026, aviation authorities globally are tightening drone regulations. The 250g threshold is the "golden ticket" for hobbyists. Below this weight, you generally don't need to register your drone or pass an online test in many jurisdictions. However, <strong>always check your local laws</strong> — some cities have additional geofencing restrictions regardless of weight.</p>
+
+            <h2 id="contenders">The 2026 Contenders (Quick Look)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Model</th>
+                        <th>Weight</th>
+                        <th>Camera</th>
+                        <th>Flight Time</th>
+                        <th>Obstacle Avoidance</th>
+                        <th>Price (USD)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>DJI Mini 5 Pro</strong></td>
+                        <td>249g</td>
+                        <td>4K/120fps, 48MP</td>
+                        <td>38 mins</td>
+                        <td>Omnidirectional (APAS 6.0)</td>
+                        <td>$999</td>
+                    </tr>
+                    <tr>
+                        <td><strong>HoverAir X1 Pro Max</strong></td>
+                        <td>195g</td>
+                        <td>4K/60fps, 32MP</td>
+                        <td>24 mins</td>
+                        <td>Downward only</td>
+                        <td>$699</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Potensic Atom 2</strong></td>
+                        <td>248g</td>
+                        <td>4K/30fps, 20MP</td>
+                        <td>32 mins</td>
+                        <td>Forward &amp; Downward</td>
+                        <td>$499</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ruko F11GIM2</strong></td>
+                        <td>245g</td>
+                        <td>4K/30fps, 12MP</td>
+                        <td>30 mins</td>
+                        <td>None (GPS only)</td>
+                        <td>$379</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2 id="dji-mini5">1. DJI Mini 5 Pro – The King (If You Can Afford It)</h2>
+            <p>DJI refined the Mini series to perfection. The Omnidirectional obstacle avoidance is a game-changer for beginners — it literally stops you from crashing into trees while you’re learning cinematic orbits. The 48MP photos are crisp enough for social media prints.</p>
+            <p><strong>Verdict:</strong> Best overall, but $1,000 is steep for a casual flyer.</p>
+
+            <h2 id="hoverair">2. HoverAir X1 Pro Max – The Travel Companion</h2>
+            <p>This is the lightest of the bunch. It fits in a large pocket. The killer feature? It unfolds instantly and supports palm-launch. However, the 24-min flight time bites — you’ll need the triple-battery kit for a full day out.</p>
+            <p><strong>Verdict:</strong> Best for vloggers who prioritize portability over flight duration.</p>
+
+            <h2 id="potensic">3. Potensic Atom 2 – The Sweet Spot</h2>
+            <p>For under $500, you get 4K, 32-minute flight time, and forward obstacle sensors. The transmission range hits 10km (slightly less stable than DJI’s O4, but solid). It’s heavy on plastic build, but who cares when you save $500?</p>
+            <p><strong>Verdict:</strong> Best value-for-money for first-time buyers.</p>
+
+            <h2 id="ruko">4. Ruko F11GIM2 – The Budget Starter</h2>
+            <p>No obstacle sensors means you need to be careful. But GPS return-to-home works reliably, and the gimbal is surprisingly stable for the price. Perfect for learning basic sticks without crying over a crash.</p>
+            <p><strong>Verdict:</strong> Best for kids or as a backup drone.</p>
+
+            <h2 id="final-advice">Final Buying Advice for 2026</h2>
+            <ul>
+                <li><strong>For Cinematic Quality:</strong> Save up for the Mini 5 Pro.</li>
+                <li><strong>For Instagram Reels / TikTok:</strong> HoverAir’s vertical shooting mode is native and easy.</li>
+                <li><strong>For Tech Tinkerers:</strong> Potensic Atom 2 runs OpenTX – you can tweak the PID settings.</li>
+                <li><strong>Don’t forget:</strong> Always buy the <em>Fly More Combo</em> (extra batteries). A drone without juice is just a paperweight.</li>
+            </ul>
+
+            <blockquote>
+                Happy flying, and remember — check your local no-fly zones before takeoff!
+            </blockquote>
+        </div>
+
+        <!-- Author Box -->
+        <div class="author-box">
+            <div class="author-avatar"></div>
+            <div>
+                <h4>Tony — Drone X</h4>
+                <p>Drone enthusiast, tech tinkerer, and aerial photographer. I break down UAV innovations, share build logs, and give honest buying advice so you can fly with confidence.</p>
+            </div>
+        </div>
+
+        <!-- Related Posts -->
+        <div class="related">
+            <h4>✈️ You might also like</h4>
+            <div class="related-grid">
+                <a href="#" class="related-item">
+                    <div class="r-title">Building a Long-Range FPV Racer from Scratch</div>
+                    <div class="r-date">July 18, 2026</div>
+                </a>
+                <a href="#" class="related-item">
+                    <div class="r-title">LiDAR vs. Vision Sensors: Which Saves You from a Crash?</div>
+                    <div class="r-date">July 10, 2026</div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="post-footer">
+            <span>© 2026 Drone X · Tony's Blog</span>
+            <span>#FlySmarter</span>
+        </div>
+    </div>
+</body>
+</html>

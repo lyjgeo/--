@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor's Blog</title>
+    <style>
+        :root{
+            --bg-body:#f7f8fa;
+            --card-bg:#ffffff;
+            --text-main:#111827;
+            --text-secondary:#4b5563;
+            --text-light:#6b7280;
+            --border-color:#e5e7eb;
+            --tag-bg:#ede9fe;
+            --tag-text:#6d28d9;
+        }
+        [data-theme="dark"]{
+            --bg-body:#121419;
+            --card-bg:#1e2129;
+            --text-main:#f3f4f6;
+            --text-secondary:#d1d5db;
+            --text-light:#9ca3af;
+            --border-color:#333842;
+            --tag-bg:#322659;
+            --tag-text:#c4b5fd;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            padding: 40px 20px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        .wrap {
+            max-width: 1020px;
+            margin: 0 auto;
+        }
+
+        /* 顶部横幅导航卡片 */
+        .header-card {
+            background: linear-gradient(145deg, #94a3b8, #64748b);
+            border-radius: 22px;
+            padding: 26px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+        }
+        .blog-name {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: white;
+            font-weight: 500;
+        }
+        .nav-group {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+        .nav-btn {
+            background: rgba(255,255,255,0.18);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 12px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .nav-btn:hover {
+            background: rgba(255,255,255,0.28);
+        }
+        .theme-toggle{
+            background:rgba(255,255,255,0.2);
+            border:none;
+            color:#fff;
+            width:36px;
+            height:36px;
+            border-radius:50%;
+            cursor:pointer;
+            font-size:18px;
+        }
+
+        /* 个人信息卡片 */
+        .profile-card {
+            background: var(--card-bg);
+            border-radius: 22px;
+            padding: 32px;
+            margin-top: -24px;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: flex-start;
+            gap: 22px;
+            transition: background 0.3s ease;
+        }
+        .avatar {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            flex-shrink: 0;
+        }
+        .profile-text h1 {
+            font-size: 38px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .profile-text p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-size: 15px;
+            margin-bottom: 24px;
+        }
+        .link-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .link-btn {
+            padding: 9px 18px;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            background: var(--card-bg);
+            font-size: 14px;
+            cursor: pointer;
+            transition: 0.2s;
+            text-decoration: none;
+            color: var(--text-main);
+        }
+        .link-btn:hover {
+            background-color: var(--bg-body);
+        }
+
+        /* 文章区域 */
+        .article-area {
+            margin-top: 48px;
+        }
+        .area-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .area-head h2 {
+            font-size: 22px;
+            font-weight: 600;
+        }
+        .article-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 28px;
+            margin-bottom: 18px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+            transition: 0.25s ease, background 0.3s ease;
+        }
+        .article-card:hover {
+            box-shadow: 0 10px 28px rgba(0,0,0,0.07);
+        }
+        .article-title {
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+        .article-title a {
+            color: var(--text-main);
+            text-decoration: none;
+        }
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 12px;
+        }
+        .tag-recommend {
+            background: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 3px 9px;
+            border-radius: 8px;
+            font-size: 13px;
+        }
+        .article-desc {
+            color: var(--text-secondary);
+            line-height: 1.65;
+        }
+
+        /* =========移动端适配========= */
+        @media (max-width: 768px) {
+            body {
+                padding: 20px 14px;
+            }
+            .header-card {
+                padding: 20px 20px;
+            }
+            .nav-group {
+                gap: 6px;
+            }
+            .nav-btn {
+                padding: 6px 10px;
+                font-size: 13px;
+            }
+            .profile-card {
+                flex-direction: column;
+                text-align: center;
+                padding: 26px 20px;
+            }
+            .avatar {
+                margin: 0 auto;
+            }
+            .profile-text h1 {
+                font-size: 30px;
+            }
+            .link-buttons {
+                justify-content: center;
+            }
+            .article-title {
+                font-size: 22px;
+            }
+            .article-card {
+                padding: 22px 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <!-- 顶部横幅导航 -->
+        <div class="header-card">
+            <div class="blog-name">
+                <span>🏷️</span> Victor's Blog
+            </div>
+            <div class="nav-group">
+                <button class="nav-btn">Post</button>
+                <button class="nav-btn">Contact</button>
+                <button class="nav-btn">YouTube</button>
+                <button class="theme-toggle" id="switchTheme">🌙</button>
+            </div>
+        </div>
+
+        <!-- 个人简介卡片 -->
+        <div class="profile-card">
+            <img class="avatar" src="avatar.png" alt="头像">
+            <div class="profile-text">
+                <h1>Fly Smarter. Build Smarter. Buy Smarter</h1>
+                <p>Hi, I’m Victor — drone enthusiast, tech tinkerer, and aerial photographer. At Drone X, I break down the latest UAV innovations, 
+				share hands‑on build logs, and give honest buying advice so you can fly with confidence. 
+				Whether you’re a first‑time buyer or a seasoned pilot, you’ll find practical guides, 
+				performance comparisons, and a peek into what’s next in the sky.</p>
+                <div class="link-buttons">
+                    <a href="#" class="link-btn">Email</a>
+                    <a href="#" class="link-btn">Main</a>
+                    <a href="#" class="link-btn">GitHub</a>
+                    <a href="#" class="link-btn">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 最新文章区域 -->
+        <div class="article-area">
+            <div class="area-head">
+                <h2>Latest Post</h2>
+            </div>
+
+            <div class="article-card">
+                <h3 class="article-title">
+                    <a href="#">2026 Drone Buying Guide: Best Sub‑250g Models Compared</a>
+                </h3>
+                <div class="article-meta">
+                    <span>2026-05-01</span>
+                    <span class="tag-recommend">Recommend</span>
+                </div>
+                <p class="article-desc">Weight, camera, battery life — what really matters for beginners and travelers.</p>
+            </div>
+
+            <div class="article-card">
+                <h3 class="article-title">
+                    <a href="#">Inside the DJI Mavic 4 Pro: What the Specs Don’t Tell You</a>
+                </h3>
+                <div class="article-meta">
+                    <span>2026-04-12</span>
+                </div>
+                <p class="article-desc">Real‑world flight tests, signal stability, and hidden software tricks.</p>
+            </div>
+
+            <div class="article-card">
+                <h3 class="article-title">
+                    <a href="#">The Future of Swarm Technology: How AI Coordinates Multiple Drones</a>
+                </h3>
+                <div class="article-meta">
+                    <span>2026-03-28</span>
+                </div>
+                <p class="article-desc">From agriculture to search & rescue — the algorithms behind the formation.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const btn = document.getElementById('switchTheme');
+        const html = document.documentElement;
+        // 读取本地存储
+        let savedTheme = localStorage.getItem('blog-theme');
+        if(savedTheme === 'dark'){
+            html.setAttribute('data-theme','dark');
+            btn.textContent = '☀️';
+        }
+        btn.addEventListener('click',()=>{
+            if(html.getAttribute('data-theme') === 'dark'){
+                html.removeAttribute('data-theme');
+                localStorage.setItem('blog-theme','light');
+                btn.textContent = '🌙';
+            }else{
+                html.setAttribute('data-theme','dark');
+                localStorage.setItem('blog-theme','dark');
+                btn.textContent = '☀️';
+            }
+        })
+    </script>
+</body>
+</html>
