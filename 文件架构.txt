@@ -1,0 +1,28 @@
+/
+├── index.html                          主站（英文 + 阿拉伯语 i18n）
+├── ar/
+│   └── index.html                      阿拉伯语 SEO 入口
+├── css/
+│   ├── style.css                       全部样式
+│   └── rtl.css                         RTL 覆盖样式
+├── js/
+│   ├── config.js                       占位符配置
+│   ├── main.js                         导航高亮、表单验证、平滑滚动
+│   └── i18n.js                         语言切换 + 翻译加载
+├── translations/
+│   ├── en.json                         英文文案
+│   └── ar.json                         阿拉伯语文案
+├── assets/
+│   ├── hero.jpg
+│   ├── ai-vision.jpg
+│   ├── slam-vio.jpg
+│   ├── edge-ai.jpg
+│   ├── agriculture.jpg
+│   ├── mapping.jpg
+│   ├── urban-airspace.jpg
+│   ├── delivery.jpg
+│   ├── inspection.jpg
+│   ├── dji.jpg
+│   ├── skydio.jpg
+│   └── ...（共 13 张，保持原 V6.1）
+└── README.txt

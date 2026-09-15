@@ -1,0 +1,85 @@
+/* ============================================================
+   DRONEX V2 — rtl.css
+   仅在 <html dir="rtl"> 时覆盖 LTR 样式
+   ============================================================ */
+
+html[dir="rtl"] body{
+  font-family:"Noto Sans Arabic",Inter,ui-sans-serif,system-ui,Arial,sans-serif;
+}
+
+/* 导航 */
+html[dir="rtl"] .nav-inner{flex-direction:row-reverse}
+html[dir="rtl"] .nav-links{flex-direction:row-reverse}
+html[dir="rtl"] .nav-links a.active:after{left:0;right:0}
+html[dir="rtl"] .nav-actions{flex-direction:row-reverse}
+html[dir="rtl"] .brand{flex-direction:row-reverse}
+
+/* Hero */
+html[dir="rtl"] .hero-content{text-align:right}
+html[dir="rtl"] .cta-row{flex-direction:row-reverse;justify-content:flex-start}
+html[dir="rtl"] .corner.tl{left:auto;right:4%;border-left:none;border-right:1px solid}
+html[dir="rtl"] .corner.tr{right:auto;left:4%;border-right:none;border-left:1px solid}
+html[dir="rtl"] .corner.bl{left:auto;right:4%;border-left:none;border-right:1px solid}
+html[dir="rtl"] .corner.br{right:auto;left:4%;border-right:none;border-left:1px solid}
+
+/* Capability */
+html[dir="rtl"] .capability-item{border-right:none;border-left:1px solid rgba(93,196,231,.12);text-align:right}
+html[dir="rtl"] .capability-item:last-child{border-left:none}
+
+/* 卡片文字右对齐 */
+html[dir="rtl"] .product-body,
+html[dir="rtl"] .solution-card,
+html[dir="rtl"] .why-card,
+html[dir="rtl"] .tech-body,
+html[dir="rtl"] .db-copy,
+html[dir="rtl"] .intel-item,
+html[dir="rtl"] .time,
+html[dir="rtl"] .me-country,
+html[dir="rtl"] .form-field,
+html[dir="rtl"] .compliance-box,
+html[dir="rtl"] .research-card,
+html[dir="rtl"] .evtol-body,
+html[dir="rtl"] .field-lab-card{text-align:right}
+
+/* 列表符号翻转 */
+html[dir="rtl"] .solution-card li{padding-left:0;padding-right:14px}
+html[dir="rtl"] .solution-card li:before{left:auto;right:0;content:"‹"}
+
+/* 产品规格 */
+html[dir="rtl"] .product-specs li{flex-direction:row-reverse}
+html[dir="rtl"] .product-specs li span:last-child{text-align:left}
+
+/* 数字/技术参数保持 LTR */
+html[dir="rtl"] .spec,
+html[dir="rtl"] .tech-code,
+html[dir="rtl"] .product-code,
+html[dir="rtl"] .why-num,
+html[dir="rtl"] .intel-num,
+html[dir="rtl"] .date,
+html[dir="rtl"] .evtol-code,
+html[dir="rtl"] .field-lab-code{direction:ltr;unicode-bidi:embed;text-align:left}
+html[dir="rtl"] .me-country span{direction:ltr;unicode-bidi:embed}
+
+/* 产品规格值 LTR */
+html[dir="rtl"] .product-specs li span:last-child,
+html[dir="rtl"] .evtol-body .product-specs li span:last-child{
+  direction:ltr;unicode-bidi:embed;
+}
+
+/* 表单 */
+html[dir="rtl"] .form-field label{text-align:right}
+html[dir="rtl"] .form-actions{flex-direction:row-reverse}
+
+/* 页脚 */
+html[dir="rtl"] .footer-grid{grid-template-columns:1fr 1fr 1fr 1.4fr}
+html[dir="rtl"] .footer-col{text-align:right}
+html[dir="rtl"] .footer-bottom{flex-direction:row-reverse}
+
+/* WhatsApp 悬浮按钮移到左下 */
+html[dir="rtl"] .wa-float{right:auto;left:22px}
+@media(max-width:760px){
+  html[dir="rtl"] .wa-float{left:14px;right:auto}
+}
+
+/* 箭头图标翻转 */
+html[dir="rtl"] .arrow{display:inline-block;transform:scaleX(-1)}
